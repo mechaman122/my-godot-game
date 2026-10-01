@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cf5rb4ghnfoeb"]
+
+[ext_resource type="Script" uid="uid://cxvv85uyqa7jx" path="res://src/entities/player/player.gd" id="1_4m8ck"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bhunq"]
+size = Vector2(4, 8)
+
+[node name="Player" type="CharacterBody2D" unique_id=656592608]
+script = ExtResource("1_4m8ck")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2086760189]
+texture = SubResource("PlaceholderTexture2D_bhunq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=645540363]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
