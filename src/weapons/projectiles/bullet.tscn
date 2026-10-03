@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dl1prq8r5ye5d"]
+
+[ext_resource type="Script" uid="uid://crg7a5j0jhqkl" path="res://src/weapons/projectiles/bullet.gd" id="1_ev5fa"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bhunq"]
+size = Vector2(2, 2)
+
+[node name="Bullet" type="CharacterBody2D" unique_id=1414398388]
+collision_layer = 9
+collision_mask = 17
+script = ExtResource("1_ev5fa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=391771524]
+texture = SubResource("PlaceholderTexture2D_bhunq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=513948599]

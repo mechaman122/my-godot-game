@@ -5,13 +5,20 @@
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bhunq"]
 size = Vector2(4, 8)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
+size = Vector2(4, 8)
+
 [node name="Player" type="CharacterBody2D" unique_id=656592608]
+collision_layer = 2
 script = ExtResource("1_4m8ck")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2086760189]
 texture = SubResource("PlaceholderTexture2D_bhunq")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=665137607]
+shape = SubResource("RectangleShape2D_bhunq")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=645540363]
-zoom = Vector2(2, 2)
+zoom = Vector2(1.8, 1.8)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
