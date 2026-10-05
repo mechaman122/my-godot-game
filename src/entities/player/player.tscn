@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://cf5rb4ghnfoeb"]
 
 [ext_resource type="Script" uid="uid://cxvv85uyqa7jx" path="res://src/entities/player/player.gd" id="1_4m8ck"]
+[ext_resource type="PackedScene" uid="uid://bikvugnpuuhgu" path="res://src/weapons/base_weapon.tscn" id="2_vt6n5"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bhunq"]
-size = Vector2(4, 8)
+size = Vector2(16, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
-size = Vector2(4, 8)
+size = Vector2(16, 32)
 
 [node name="Player" type="CharacterBody2D" unique_id=656592608]
 collision_layer = 2
@@ -15,10 +16,12 @@ script = ExtResource("1_4m8ck")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2086760189]
 texture = SubResource("PlaceholderTexture2D_bhunq")
 
+[node name="BaseWeapon" parent="." unique_id=2076098776 instance=ExtResource("2_vt6n5")]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=665137607]
 shape = SubResource("RectangleShape2D_bhunq")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=645540363]
-zoom = Vector2(1.8, 1.8)
+zoom = Vector2(1.3, 1.3)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true

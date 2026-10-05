@@ -10,4 +10,4 @@ speed = 200
 
 [node name="Enemy" parent="." unique_id=231255137 instance=ExtResource("2_h2yge")]
 position = Vector2(298, 189)
-scale = Vector2(18.029198, 13.878822)
+scale = Vector2(15, 11.547)

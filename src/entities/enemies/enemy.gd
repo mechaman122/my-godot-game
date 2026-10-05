@@ -18,7 +18,8 @@ func _physics_process(delta):
 
 func handle_movement(_delta):
     # Implement enemy movement logic here
-    move_and_slide()
+    # move_and_slide()
+    pass
 
 func take_damage(amount: int):
     current_health -= amount

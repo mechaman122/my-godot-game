@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bikvugnpuuhgu"]
+
+[ext_resource type="Script" uid="uid://bnigljr1iuove" path="res://src/weapons/base_weapon.gd" id="1_eamhm"]
+[ext_resource type="Texture2D" uid="uid://de3nx50j44j84" path="res://assets/SnoopethDuckDuck Guns/59.png" id="2_fc5kb"]
+
+[node name="BaseWeapon" type="Node2D" unique_id=2076098776]
+script = ExtResource("1_eamhm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=342359742]
+texture = ExtResource("2_fc5kb")
+offset = Vector2(6, 0)
+
+[node name="BarrelOrigin" type="Node2D" parent="." unique_id=1521144190]
+position = Vector2(23, -2)
