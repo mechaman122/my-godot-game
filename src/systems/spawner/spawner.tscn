@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://do0chywi4scm0"]
+
+[ext_resource type="Script" uid="uid://b1oqtsgkkq6po" path="res://src/systems/spawner/spawner.gd" id="1_a3jd5"]
+
+[node name="Spawner" type="Node2D" unique_id=1191126321]
+script = ExtResource("1_a3jd5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1910467877]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=125860915]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Minute" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=945180159]
+unique_name_in_owner = true
+layout_mode = 2
+text = "00"
+
+[node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=313967514]
+layout_mode = 2
+text = ":"
+
+[node name="Second" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=517265618]
+unique_name_in_owner = true
+layout_mode = 2
+text = "00"
+
+[node name="Timer" type="Timer" parent="." unique_id=61351774]
+autostart = true
+
+[node name="Pattern" type="Timer" parent="." unique_id=2023278351]
+wait_time = 10.0
+autostart = true
+
+[node name="Elite" type="Timer" parent="." unique_id=1698892621]
+wait_time = 9.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

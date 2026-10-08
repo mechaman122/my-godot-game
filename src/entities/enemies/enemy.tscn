@@ -4,13 +4,13 @@
 [ext_resource type="Script" uid="uid://dwedp5lsdbrkk" path="res://src/systems/hitboxes/hurtbox.gd" id="2_bxar5"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bhunq"]
-size = Vector2(4, 8)
+size = Vector2(16, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
-size = Vector2(4, 8)
+size = Vector2(16, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_riqys"]
-size = Vector2(4, 8)
+size = Vector2(16, 32)
 
 [node name="Enemy" type="CharacterBody2D" unique_id=231255137]
 collision_mask = 3

@@ -13,4 +13,4 @@ texture = ExtResource("2_fc5kb")
 offset = Vector2(6, 0)
 
 [node name="BarrelOrigin" type="Node2D" parent="." unique_id=1521144190]
-position = Vector2(23, -2)
+position = Vector2(21, -2)

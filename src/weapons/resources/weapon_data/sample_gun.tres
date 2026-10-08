@@ -6,6 +6,8 @@
 
 [resource]
 script = ExtResource("3_wf8we")
+bullet_count = 5
+arc = 30.0
 fire_rate = 4.0
 attack_data = ExtResource("1_kja3q")
 metadata/_custom_type_script = "uid://da1vsq6iwffnv"

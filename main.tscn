@@ -1,13 +1,19 @@
 [gd_scene format=3 uid="uid://b2rqxk6328ss2"]
 
 [ext_resource type="PackedScene" uid="uid://cf5rb4ghnfoeb" path="res://src/entities/player/player.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://do0chywi4scm0" path="res://src/systems/spawner/spawner.tscn" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://1qaf32gmxgby" path="res://src/entities/enemies/enemy.tscn" id="2_h2yge"]
 
 [node name="Main" type="Node2D" unique_id=1932547911]
 
+[node name="Spawner" parent="." unique_id=1191126321 node_paths=PackedStringArray("player") instance=ExtResource("1_h2yge")]
+player = NodePath("../Player")
+enemy = ExtResource("2_h2yge")
+
 [node name="Player" parent="." unique_id=656592608 instance=ExtResource("1_0xm2m")]
 speed = 200
 
-[node name="Enemy" parent="." unique_id=231255137 instance=ExtResource("2_h2yge")]
+[node name="Enemy" parent="." unique_id=231255137 node_paths=PackedStringArray("player_ref") instance=ExtResource("2_h2yge")]
 position = Vector2(298, 189)
-scale = Vector2(15, 11.547)
+scale = Vector2(5, 5)
+player_ref = NodePath("../Player")
