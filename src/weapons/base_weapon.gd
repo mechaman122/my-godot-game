@@ -7,6 +7,14 @@ class_name BaseWeapon
 @export_range(0, 20) var fire_rate: float = 2.0
 @onready var barrel_origin: Node2D = get_node("BarrelOrigin")
 
+@export var weapon_data: WeaponData:
+	set(data):
+		weapon_data = data
+		bullet = data.bullet
+		bullet_count = data.bullet_count
+		arc = data.arc
+		fire_rate = data.fire_rate
+
 var can_shoot: bool = true
 
 func _ready():
@@ -25,6 +33,8 @@ func shoot():
 		for i in range(bullet_count):
 			var new_bullet = bullet.instantiate()
 			new_bullet.position = barrel_origin.global_position if barrel_origin else global_position
+			new_bullet.attack_data = weapon_data.attack_data
+			new_bullet.source = owner as CharacterBody2D
 
 			if bullet_count == 1:
 				new_bullet.rotation = global_rotation

@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://1qaf32gmxgby"]
 
 [ext_resource type="Script" uid="uid://csf5unmhfvuo4" path="res://src/entities/enemies/enemy.gd" id="1_x525q"]
+[ext_resource type="Script" uid="uid://dwedp5lsdbrkk" path="res://src/systems/hitboxes/hurtbox.gd" id="2_bxar5"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bhunq"]
 size = Vector2(4, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
+size = Vector2(4, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_riqys"]
 size = Vector2(4, 8)
 
 [node name="Enemy" type="CharacterBody2D" unique_id=231255137]
@@ -17,3 +21,11 @@ texture = SubResource("PlaceholderTexture2D_bhunq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=448817191]
 shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1706393765]
+script = ExtResource("2_bxar5")
+metadata/_custom_type_script = "uid://dwedp5lsdbrkk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1919378536]
+shape = SubResource("RectangleShape2D_riqys")
+debug_color = Color(0.9738119, 0, 0.43470863, 0.41960785)

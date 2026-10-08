@@ -23,6 +23,7 @@ func handle_movement(_delta):
 
 func take_damage(amount: int):
     current_health -= amount
+    print(current_health)
     if current_health <= 0:
         die()
 

@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 @export var speed = 300
 @export var bullet_scene: PackedScene = preload("res://src/weapons/projectiles/bullet.tscn")

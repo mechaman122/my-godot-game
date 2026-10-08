@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bnigljr1iuove" path="res://src/weapons/base_weapon.gd" id="1_eamhm"]
 [ext_resource type="Texture2D" uid="uid://de3nx50j44j84" path="res://assets/SnoopethDuckDuck Guns/59.png" id="2_fc5kb"]
+[ext_resource type="Resource" uid="uid://ce7smjjswtx2i" path="res://src/weapons/resources/weapon_data/sample_gun.tres" id="2_lii51"]
 
 [node name="BaseWeapon" type="Node2D" unique_id=2076098776]
 script = ExtResource("1_eamhm")
+weapon_data = ExtResource("2_lii51")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=342359742]
 texture = ExtResource("2_fc5kb")

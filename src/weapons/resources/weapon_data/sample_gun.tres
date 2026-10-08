@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://ce7smjjswtx2i"]
+
+[ext_resource type="Resource" uid="uid://c7ioo1py5vjvr" path="res://src/weapons/resources/attack_data/sample_projectile.tres" id="1_kja3q"]
+[ext_resource type="PackedScene" uid="uid://dl1prq8r5ye5d" path="res://src/weapons/projectiles/bullet.tscn" id="2_23ir8"]
+[ext_resource type="Script" uid="uid://da1vsq6iwffnv" path="res://src/weapons/resources/weapon_data/weapon_data.gd" id="3_wf8we"]
+
+[resource]
+script = ExtResource("3_wf8we")
+fire_rate = 4.0
+attack_data = ExtResource("1_kja3q")
+metadata/_custom_type_script = "uid://da1vsq6iwffnv"
